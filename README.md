@@ -9,10 +9,8 @@
 NBFM is based on SoftFM which is a software-defined radio receiver for FM broadcast radio.
 It is written in C++ and uses RTL-SDR to interface with RTL2832-based hardware.
 
-Original Code has been modified
+SoftFM Code has been modified
 
- * to use RTAudio instead of ALSA so it can work on Mac OSX
- * demonstrate parts of *spuce* library
  * modified to only do mono narrow-band FM demod
  * use hard-coded IF sampling rate of 1.152MHz
  * use hard-coded audio sample rate of 48kHz
