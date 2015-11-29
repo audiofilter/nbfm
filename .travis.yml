@@ -1,0 +1,22 @@
+dist: trusty
+language:  cpp
+compiler : gcc
+before_install:
+  - sudo apt-get update -qq
+install:
+  - sudo apt-get install -qq cmake
+  - sudo apt-get install -qq librtaudio-dev
+  - sudo apt-get install -qq libusb-1.0-0-dev
+  - sudo apt-get install -qq librtlsdr-dev
+  - git clone https://github.com/audiofilter/spuce.git
+  - cd spuce
+  - mkdir build
+  - cd build
+  - cmake ..
+  - sudo make install
+  - cd ../..
+before_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+script: make
